@@ -31,6 +31,7 @@ const Header = () => {
                       alt={session.user.name!}
                       width={40}
                       height={40}
+                      className="hover:scale-125 transition-all duration-700 object-cover w-full h-full"
                     />
                   </div>
                 ) : (
