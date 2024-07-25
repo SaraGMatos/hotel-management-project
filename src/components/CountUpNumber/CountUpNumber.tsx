@@ -1,12 +1,11 @@
-import { timeStamp } from "console";
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
   endValue: number;
   duration: number;
 }
 
-const CountUpNumber: FC<Props> = ({ endValue, duration }) => {
+const CountUpNumber = ({ endValue, duration }: Props) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -27,6 +26,7 @@ const CountUpNumber: FC<Props> = ({ endValue, duration }) => {
         setCount(endValue);
       }
     };
+
     animationFrameId = requestAnimationFrame(updateCount);
 
     return () => cancelAnimationFrame(animationFrameId);
