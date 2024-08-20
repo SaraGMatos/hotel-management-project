@@ -6,7 +6,7 @@ import PageSearch from "@/components/PageSearch/PageSearch";
 const Home = () => {
   return (
     <>
-      <HeroSection></HeroSection>
+      <HeroSection />
       <PageSearch />
       {/* Featured room  */}
       <Gallery />
