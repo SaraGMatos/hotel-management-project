@@ -1,6 +1,6 @@
 "use client";
 
-import RoomCard from "@/components/RoomCard.tsx/RoomCard";
+import RoomCard from "@/components/RoomCard/RoomCard";
 import Search from "@/components/Search/Search";
 import { getRooms } from "@/libs/apis";
 import { Room } from "@/models/room";
