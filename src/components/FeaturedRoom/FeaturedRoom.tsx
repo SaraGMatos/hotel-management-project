@@ -55,7 +55,7 @@ const FeaturedRoom = ({ featuredRoom }: Props) => {
 
           <Link
             href={`/rooms/${featuredRoom.slug.current}`}
-            className="border h-fit text-center border-tertiary-dark text-tertiary-dark px-3 py-2 lg:py-5 lg:px-7 rounded-2xl font-bold lg:text-xl mx-4"
+            className="border h-fit text-center border-tertiary-dark dark:border-secondary text-tertiary-dark dark:text-secondary px-3 py-2 lg:py-5 lg:px-7 rounded-2xl font-bold lg:text-xl mx-4"
           >
             More Details
           </Link>
