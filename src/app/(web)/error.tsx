@@ -1,4 +1,4 @@
-"use client"; // error boundaries myst be client components
+"use client"; // error boundaries must be client components
 
 export default function Error({
   error,
