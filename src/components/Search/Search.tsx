@@ -41,7 +41,7 @@ const Search = ({
             <select
               value={roomTypeFilter}
               onChange={handleRoomTypeChange}
-              className="w-full px-4 py-2 capitalize rounded leading-tight dark:bg-black focus:outline-none"
+              className="w-full px-4 py-2 capitalize rounded leading-tight dark:bg-gray-600 focus:outline-none"
             >
               <option value="All">All</option>
               <option value="Basic">Basic</option>
@@ -59,7 +59,7 @@ const Search = ({
             type="search"
             id="search"
             placeholder="Search..."
-            className="w-full px-4 py-3 rounded leading-tight dark:bg-black focus:outline-none dark:placeholder:text-white"
+            className="w-full px-4 py-3 rounded leading-tight dark:bg-gray-600 focus:outline-none dark:placeholder:text-white"
             value={searchQuery}
             onChange={handleSetQueryChange}
           />
