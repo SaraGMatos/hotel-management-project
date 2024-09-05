@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const heading1 = (
   <>
-    <h1 className="font-heading mb-6">Explore Our Fantastic Hotels</h1>
+    <h1 className="font-heading mb-6">Explore Our Fantastic Accommodation</h1>
     <p className="text-[#4a4a4a] dark:text-[#ffffffea] mb-12 max-w-lg">
       From our budget-friendly basic rooms, to our lush luxury rooms and
       impressive suites.
