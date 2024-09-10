@@ -20,8 +20,9 @@ export const BookRoomCta = (children: Props) => {
         </span>
         {discount ? (
           <span className="font-bold text-xl">
-            | discount {discount}%. Now{" "}
-            <span className="text-tertiary-dark">£{discountPrice}</span>{" "}
+            {" "}
+            | Now <span className="text-tertiary-dark">£{discountPrice}</span> (
+            {discount}% discount)
           </span>
         ) : (
           ""
