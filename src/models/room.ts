@@ -32,6 +32,6 @@ export type Room = {
   offeredAmenities: Amenity[];
   price: number;
   slug: Slug;
-  specialNotes: string;
+  specialNote: string;
   type: string;
 };
