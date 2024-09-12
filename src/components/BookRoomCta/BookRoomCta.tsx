@@ -12,11 +12,13 @@ interface Props {
   price: number;
   discount: number;
   specialNote: string;
-  calculateMinCheckoutDate: () => Date | null;
+  calculateMinCheckoutDate: () => Date | undefined;
   adults: number;
   setAdults: Dispatch<SetStateAction<number>>;
   numChildren: number;
   setNumChildren: Dispatch<SetStateAction<number>>;
+  isBooked: boolean;
+  handleBookNowClick: () => void;
 }
 
 export const BookRoomCta = (props: Props) => {
@@ -33,6 +35,8 @@ export const BookRoomCta = (props: Props) => {
     setAdults,
     numChildren,
     setNumChildren,
+    isBooked,
+    handleBookNowClick,
   } = props;
 
   const discountPrice = price - (price / 100) * discount;
@@ -149,6 +153,14 @@ export const BookRoomCta = (props: Props) => {
       ) : (
         <></>
       )}
+
+      <button
+        disabled={isBooked}
+        onClick={handleBookNowClick}
+        className="btn-primary w-full mt-6 disabled:bg-gray-500 disabled:cursor-not-allowed"
+      >
+        {isBooked ? "Booked" : "Book Now"}
+      </button>
     </div>
   );
 };
