@@ -46,9 +46,9 @@ const RoomDetails = (props: { params: { slug: string } }) => {
       nextDay.setDate(nextDay.getDate() + 1);
       return nextDay;
     }
-
-    return null;
   };
+
+  const handleBookNowClick = () => {};
 
   return (
     <div>
@@ -143,6 +143,8 @@ const RoomDetails = (props: { params: { slug: string } }) => {
               numChildren={numChildren}
               setAdults={setAdults}
               setNumChildren={setNumChildren}
+              isBooked={room.isBooked}
+              handleBookNowClick={handleBookNowClick}
             />
           </div>
         </div>
