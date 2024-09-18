@@ -8,6 +8,7 @@ interface Props {
   searchQuery: string;
   setRoomTypeFilter: (value: string) => void;
   setSearchQuery: (value: string) => void;
+  pathname: string;
 }
 
 const Search = ({
@@ -15,6 +16,7 @@ const Search = ({
   searchQuery,
   setRoomTypeFilter,
   setSearchQuery,
+  pathname,
 }: Props) => {
   const router = useRouter();
 
@@ -32,7 +34,13 @@ const Search = ({
 
   return (
     <section className="bg-tertiary-light px-4 py-6 rounded-lg">
-      <div className="container mx-auto flex gap-4 flex-wrap justify-between items-center">
+      <div
+        className={
+          pathname === "/rooms"
+            ? "container mx-auto flex gap-4 flex-wrap justify-around items-center"
+            : "container mx-auto flex gap-4 flex-wrap justify-between items-center"
+        }
+      >
         <div className="w-full md:1/3 lg:w-auto mb-4 md:mb-0">
           <label className="block text-sm font-medium mb-2 text-black">
             Room Type
@@ -69,6 +77,7 @@ const Search = ({
           className="btn-primary"
           type="button"
           onClick={handleFilterClick}
+          hidden={pathname === "/rooms" ? true : false}
         >
           Search
         </button>
