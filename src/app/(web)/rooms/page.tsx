@@ -5,13 +5,16 @@ import Search from "@/components/Search/Search";
 import { getRooms } from "@/libs/apis";
 import { Room } from "@/models/room";
 import { useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 const Rooms = () => {
   const [roomTypeFilter, setRoomTypeFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
   useEffect(() => {
     const searchQuery = searchParams.get("searchQuery");
@@ -72,6 +75,7 @@ const Rooms = () => {
         searchQuery={searchQuery}
         setRoomTypeFilter={setRoomTypeFilter}
         setSearchQuery={setSearchQuery}
+        pathname={pathname}
       />
 
       <div className="flex mt-20 justify-around flex-wrap">
